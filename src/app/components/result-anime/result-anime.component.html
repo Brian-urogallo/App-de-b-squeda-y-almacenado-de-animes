@@ -1,0 +1,11 @@
+<div class="results" *ngIf="anime_results.length > 0">
+    <div *ngFor="let anime of anime_results" class="result">
+        <img [src]="anime.images['jpg'].image_url" alt="..">
+       <div class="details">
+        <h3>{{anime.title}}</h3>
+        <p>{{anime.synopsis.slice(0,190)}}...</p>
+        <span class="flex-1"></span>
+        <button type="button" (click)="addAnime(anime)" class="button">Add to MyAnime</button>
+        </div>
+    </div>
+</div>
